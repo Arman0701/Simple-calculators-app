@@ -1,0 +1,12 @@
+.button {
+	width: 44px;
+	height: 44px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: 1px solid slateblue;
+	font-weight: 500;
+	margin: 3px;
+	color: slateblue;
+	border-radius: 5px;
+}

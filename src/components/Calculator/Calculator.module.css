@@ -1,0 +1,16 @@
+.calculator {
+    display: block;
+    width: max-content;
+    height: max-content;
+	border: 2px solid slateblue;
+    padding: 10px;
+    border-radius: 15px;
+    margin: 15px 40px;
+    text-align: center;
+    background: white;
+}
+.buttons {
+    width: 200px;
+    display: flex;
+    flex-wrap: wrap;
+}
