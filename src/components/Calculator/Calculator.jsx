@@ -4,11 +4,11 @@ import Button from "../Button";
 import calc from "../../helpers/calc";
 import { useState } from "react";
 
-const textBtn = ['7', '8', '9', '+', '4', '5', '6', '-', '1', '2', '3', '/', '.', '0', '=', '*'];
+const textBtn = ['CE','7', '8', '9', '+', '4', '5', '6', '-', '1', '2', '3', '/', '.', '0', '=', '*'];
 
 export default function Calculator({ active, id }) {
     
-    const [, setState] = useState();
+    const [, setState] = useState(null);
     const [screenValue, setScreenValue] = useState("");
     
     const setActiveElement = () => {
@@ -59,6 +59,10 @@ export default function Calculator({ active, id }) {
                 break;
         }
     }
+    const resetState = () => {
+        setScreenValue("");
+        setState(null);
+    }
 
     return (
         <div onClick={setActiveElement} className={style.calculator}>
@@ -67,6 +71,13 @@ export default function Calculator({ active, id }) {
                 {
                     textBtn.map(item => {
                         switch(item){
+                            case 'CE':
+                                return <div style={{
+                                    display: 'inline-flex',
+                                    width: '200px',
+                                }}>
+                                    <Button key={Math.random()} innerText={item} onclick={resetState} />
+                                </div>
                             case '+':
                                 return <Button key={Math.random()} innerText={item} onclick={add} />
                             case '-':
