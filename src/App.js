@@ -30,11 +30,11 @@ function App() {
     return <>
 		<div className={style.header}>
 			<span>Calculator App</span>
-			<div className={style.mainButtons}>
+			{window.innerWidth > 500 && <div className={style.mainButtons}>
 				<button onClick={addCalc} className={style.mainButton}>Add</button>
 				<button onClick={removeCalc} className={style.mainButton}>Remove</button>
 				<button onClick={removeAll} className={style.mainButton}>Remove All</button>
-			</div>
+			</div>}
 		</div>
 		<div className={style.calcs}>
 			{state.map((item) => <Calculator key={item} id={item} active={setActive} /> )}

@@ -1,3 +1,5 @@
+@import "../../sass/mixings";
+
 .calculator {
     display: block;
     width: max-content;
@@ -7,7 +9,11 @@
     margin: 15px 40px;
     text-align: center;
     background: rgba(17, 9, 9, 0.73);
-	
+
+
+	@include BP(mobile) {
+		transform: scale(1.5);
+	}
 	
 	.buttons {
 		width: 200px;
