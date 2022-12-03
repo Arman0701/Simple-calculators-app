@@ -1,8 +1,10 @@
-import style from "./App.module.css";
-import { useEffect, useReducer, useState } from "react";
+import style from "./App.module.scss";
+
+import { useReducer, useState } from "react";
 import { v1 as getID } from 'uuid';
+
 import reducer from "./helpers/reducer";
-import Calculator from "./components/Calculator/Calculator";
+import Calculator from "./components/Calculator";
 
 function App() {
 	
@@ -25,19 +27,19 @@ function App() {
 		dispatch({type: 'REMOVE_ALL'});
 	}
 
-    return <div className="App">
+    return <>
 		<div className={style.header}>
-			Simple Calculators
+			<span>Calculator App</span>
 			<div className={style.mainButtons}>
-				<div onClick={addCalc} className={style.mainButton}>Add</div>
-				<div onClick={removeCalc} className={style.mainButton}>Remove</div>
-				<div onClick={removeAll} className={style.mainButton}>Remove All</div>
+				<button onClick={addCalc} className={style.mainButton}>Add</button>
+				<button onClick={removeCalc} className={style.mainButton}>Remove</button>
+				<button onClick={removeAll} className={style.mainButton}>Remove All</button>
 			</div>
 		</div>
 		<div className={style.calcs}>
 			{state.map((item) => <Calculator key={item} id={item} active={setActive} /> )}
 		</div>
-	</div>
+	</>
 }
 
 export default App;

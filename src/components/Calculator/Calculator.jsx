@@ -1,4 +1,4 @@
-import style from "./Calculator.module.css";
+import style from "./Calculator.module.scss";
 import Screen from "../Screen";
 import Button from "../Button";
 import calc from "../../helpers/calc";

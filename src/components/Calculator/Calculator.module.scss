@@ -2,15 +2,16 @@
     display: block;
     width: max-content;
     height: max-content;
-	border: 2px solid slateblue;
     padding: 10px;
-    border-radius: 15px;
+    border-radius: 8px;
     margin: 15px 40px;
     text-align: center;
-    background: white;
-}
-.buttons {
-    width: 200px;
-    display: flex;
-    flex-wrap: wrap;
+    background: rgba(17, 9, 9, 0.73);
+	
+	
+	.buttons {
+		width: 200px;
+		display: flex;
+		flex-wrap: wrap;
+	}
 }

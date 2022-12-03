@@ -1,10 +1,9 @@
-import style from './Button.module.css';
+import style from './Button.module.scss';
 
-export default function Button({innerText, onclick, customStyle}) {
-
+export default function Button({innerText, onclick}) {
 	return (
-		<div className={style.button} onClick={onclick}> 
+		<button className={style.button} onClick={onclick}> 
 			{innerText}
-		</div>
+		</button>
 	);
 }

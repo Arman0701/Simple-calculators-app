@@ -1,4 +1,4 @@
-import style from './Screen.module.css';
+import style from './Screen.module.scss';
 
 export default function Screen({innerText, bg}) {
 
