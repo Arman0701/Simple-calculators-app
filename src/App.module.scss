@@ -43,11 +43,13 @@
             color: white;
             border-radius: 4px;
 
-			&:last-child {
-				margin-right: 0;
-			}
-			&:first-child {
-				margin-left: 0;
+			@include BP(mobile) {
+				&:last-child {
+					margin-right: 0;
+				}
+				&:first-child {
+					margin-left: 0;
+				}
 			}
         }
     }
